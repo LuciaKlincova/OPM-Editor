@@ -1,0 +1,34 @@
+/**
+ * Copyright (c) PolarSys, 2020. All rights reserved. 
+ *
+ *	Viewpoint midas_prototype
+ *	@author: H357213
+ *	@date: 12/16/20
+ *
+ */
+Configuration midas_prototype.conf {
+	target Capella
+	project org.polarsys.capella.vp.midas_prototype
+	nsuri "http://www.polarsys.org/capella/midas_prototype"
+	release {
+		version : 1.0.0.qualifier
+		description : "Viewpoint Description"
+		execution environments : "JavaSE-1.8"
+	}
+	generation {
+		data (
+			Model: true
+			Edit: true
+			Editor: false
+			Test: false
+			Javadoc: false
+			OverwriteEcore: true
+		)
+		diagram (
+			OverwriteOdesign: false
+		)
+		documentation (
+			EcoreToHtml: false
+		)
+	}
+}

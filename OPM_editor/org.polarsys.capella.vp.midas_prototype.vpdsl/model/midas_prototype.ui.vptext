@@ -1,0 +1,74 @@
+/**
+ * Copyright (c) PolarSys, 2020. All rights reserved. 
+ *
+ *	Viewpoint midas_prototype.ui
+ *	@author: H357213
+ *	@date: 12/16/20
+ *
+ */
+UIDescription midas_prototype.ui {
+	UI midas_prototype_OpmEntity for midas_prototype.data.OpmEntity {
+		label: "OpmEntity"
+		Container midas_prototype_OpmEntitySection {
+			Container midas_prototype_OpmEntity_AttributeGroup {
+				label: "Attributes"
+				Field entityName label: "Name" type text , mapped-to midas_prototype.data.OpmEntity.name
+			}
+			Container midas_prototype_OpmEntity_AssociationGroup {
+				label: "Associations"
+				Field references label: "References" type multipleChoiceList , mapped-to midas_prototype.data.OpmEntity.references
+//				Field refAssociation label: "Refs" type multipleChoiceList, mapped-to midas_prototype.data.OpmEntity.ref
+			}
+		}
+	}
+	
+	UI midas_prototype_OpmThing for midas_prototype.data.OpmThing {
+		label: "OpmThing"
+		Container midas_prototype_OpmThingSection {
+			Field composablesAssociation label: "Composables" type multipleChoiceList , mapped-to midas_prototype.data.OpmThing.composables
+		}
+	}
+	
+	
+	UI midas_prototype_OpmObject for midas_prototype.data.OpmObject {
+		label: "OpmObject"
+		Container midas_prototype_OpmObjectSection {
+			Field stateAssociation label: "States" type multipleChoiceList, mapped-to midas_prototype.data.OpmObject.states
+		}
+	}
+	
+	
+	UI midas_prototype_OpmRelation for midas_prototype.data.OpmRelation {
+		label: "OpmReference"
+		Container midas_prototype_OpmReferenceToSection {
+			label: "To"
+			Field referenceToCard label: "Cardinality" type text, mapped-to midas_prototype.data.OpmRelation.toParticipationConstraint
+		}
+		Container midas_prototype_OpmReferenceFromSection {
+			label: "From"
+			Field referenceFromCard label: "Cardinality" type text, mapped-to midas_prototype.data.OpmRelation.fromParticipationConstraint
+		}
+		
+	}
+	
+	UI midas_prototype_OpmStructuralRelation for midas_prototype.data.OpmStructuralRelation {
+		label: "OpmStructuralRelation"
+		Container midas_prototype_OpmSection {
+			label:"Section"
+			Field referenceTo label: "To" type simpleChoiceList, mapped-to midas_prototype.data.OpmStructuralRelation.to
+			Field referenceFrom label: "From" type simpleChoiceList, mapped-to midas_prototype.data.OpmStructuralRelation.from
+		}
+		Container midas_prototype_OpmReferenceSection {
+			Field referenceName label: "Name" type text, mapped-to midas_prototype.data.OpmStructuralRelation.name
+			Field referenceLabel label: "Tag" type text, mapped-to midas_prototype.data.OpmStructuralRelation.tag
+		}
+	}
+	
+	UI midas_prototype_OpmOutputRelation for midas_prototype.data.OpmOutputRelation {
+		label: "OpmOutputRelation"
+		Container midas_prototype_OpmOutputRelation {
+			label: "Output Relation"
+			Field relationOutputTo label: "To" type simpleChoiceList, mapped-to midas_prototype.data.OpmOutputRelation.to
+		}
+	}
+}

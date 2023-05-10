@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Icons
+Bundle-SymbolicName: org.polarsys.capella.vp.midas_prototype.ui.icons
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.polarsys.capella.vp.midas_prototype.ui.icons
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

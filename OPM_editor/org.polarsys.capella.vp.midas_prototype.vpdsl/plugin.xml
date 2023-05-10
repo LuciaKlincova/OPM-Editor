@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<extension
+	     point="org.polarsys.kitalpha.resourcereuse.resources">
+	  <resource
+	        domain="vpdsl"
+	        id="org.polarsys.capella.vp.midas_prototype.vpdsl.description"
+	        tags="vpdesc"
+	        name="midas_prototype"
+	        path="/org.polarsys.capella.vp.midas_prototype.vpdsl/model/midas_prototype.vpdesc"/>
+	</extension>
+
+
+	<extension
+	     point="org.polarsys.kitalpha.resourcereuse.resources">
+	  <resource
+	        domain="vpdsl"
+	        id="org.polarsys.capella.vp.midas_prototype.vpdsl.resource.midas_prototype.spec"
+	        tags="Viewpoint"
+	        name="spec"
+	        path="/org.polarsys.capella.vp.midas_prototype.vpdsl/model/midas_prototype.spec.vptext"/>
+	</extension>
+
+	<extension
+	     point="org.polarsys.kitalpha.resourcereuse.resources">
+	  <resource
+	        domain="vpdsl"
+	        id="org.polarsys.capella.vp.midas_prototype.vpdsl.resource.midas_prototype.data"
+	        tags="Viewpoint"
+	        name="data"
+	        path="/org.polarsys.capella.vp.midas_prototype.vpdsl/model/midas_prototype.data.vptext"/>
+	</extension>
+
+	<extension
+	     point="org.polarsys.kitalpha.resourcereuse.resources">
+	  <resource
+	        domain="vpdsl"
+	        id="org.polarsys.capella.vp.midas_prototype.vpdsl.resource.midas_prototype.conf"
+	        tags="Viewpoint"
+	        name="conf"
+	        path="/org.polarsys.capella.vp.midas_prototype.vpdsl/model/midas_prototype.conf.vptext"/>
+	</extension>
+
+	<extension
+	     point="org.polarsys.kitalpha.resourcereuse.resources">
+	  <resource
+	        domain="vpdsl"
+	        id="org.polarsys.capella.vp.midas_prototype.vpdsl.resource.midas_prototype.midas_prototype.ui"
+	        tags="Viewpoint"
+	        name="ui"
+	        path="/org.polarsys.capella.vp.midas_prototype.vpdsl/model/midas_prototype.ui.vptext"/>
+	</extension>
+
+	<extension
+	     point="org.polarsys.kitalpha.resourcereuse.resources">
+	  <resource
+	        domain="vpdsl"
+	        id="org.polarsys.capella.vp.midas_prototype.vpdsl.resource.midas_prototype.midas_prototype.diagram"
+	        tags="Viewpoint"
+	        name="diagram"
+	        path="/org.polarsys.capella.vp.midas_prototype.vpdsl/model/midas_prototype.diagram.vptext"/>
+	</extension>
+</plugin>

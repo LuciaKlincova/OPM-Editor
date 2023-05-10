@@ -1,0 +1,210 @@
+/**
+ * Copyright (c) PolarSys, 2020. All rights reserved. 
+ *
+ *	Viewpoint midas_prototype
+ *	@author: H357213
+ *	@date: 12/16/20
+ *
+ */ 
+
+Data midas_prototype.data {
+	Class OPM {
+		icon: "opm.gif"
+		extends capellamodeller.SystemEngineering
+		Associations:
+			elements contains [0,*] OpmThing
+	}
+	
+	/***********************************************
+	*  Entities
+	************************************************/
+	// Entity meta-model: OPM pg. 63
+	Class OpmEntity {
+		superClass external emde.Element
+		abstract: true
+		Attributes:
+			name type ecore.EString
+		Associations:
+			references contains [0,*] OpmRelation
+	}
+	
+	Class OpmThing {
+		superClass OpmEntity
+		abstract: true
+		Attributes:
+			essence enum EssenceType
+			affiliation enum AffiliationType
+		Associations:
+			composables contains [0,*] OpmThing
+	}
+	
+	Class OpmObject {
+		icon: "object.gif"
+		superClass OpmThing
+		Associations:
+			states contains [0,*] OpmState
+	}
+	
+	Class OpmProcess {
+		icon: "process.gif"
+		superClass OpmThing
+	}
+	
+	Class OpmState {
+		icon: "state.gif"
+		superClass OpmEntity
+		
+	}
+	
+	/***********************************************
+	*  Relations
+	************************************************/
+	Class OpmRelation {
+		superClass external emde.Element
+		abstract: true
+		Attributes:
+			fromParticipationConstraint type ecore.EString // Both structural and procedural relations can have cardinalities
+			toParticipationConstraint type ecore.EString
+	}
+	
+	// Structural Relations
+	// OPM Ch 6 pg. 105
+	Class OpmStructuralRelation {
+		superClass OpmRelation
+		Attributes:
+			name type ecore.EString // The name that shows up in the semantic tree model
+			tag type ecore.EString // The tag that shows up in the diagram
+		Associations:
+			from refers [1,1] OpmEntity
+			to refers [1,1] OpmEntity
+	}
+	
+		
+	// Procedural Relations
+	// OPM Ch 5 pg. 83
+	Class OpmProceduralRelation {
+		superClass OpmRelation
+		abstract: true
+	}
+	
+	Class OpmConsumeResultRelation {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmThing
+			to refers[1,1] OpmThing
+	}
+	
+	Class OpmInputRelation {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmState
+			to refers[1,1] OpmProcess
+	}
+	
+	Class OpmOutputRelation {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmProcess
+			to refers[1,1] OpmState
+	}
+	
+	Class OpmEffectLink {
+		icon: "dual_closed_arrow.png"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmThing
+			to refers[1,1] OpmThing
+	}
+	
+	Class OpmAgentLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmObject
+			to refers[1,1] OpmProcess
+	}
+	
+	Class OpmInstrumentLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmObject
+			to refers[1,1] OpmProcess
+	}
+	
+	Class OpmUndirectionalLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Attributes:
+			tag type ecore.EString
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	Class OpmBidirectionalLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Attributes:
+			tagLeftToRight type ecore.EString
+			tagRightToLeft type ecore.EString
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	Class OpmReciprocalLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Attributes:
+			tag type ecore.EString
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	Class OpmAggregationLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	Class OpmExhibitionLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	Class OpmGeneralizationLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	Class OpmClassificationLink {
+		icon: "single_closed_arrow_left.gif"
+		superClass OpmProceduralRelation
+		Associations:
+			from refers[1,1] OpmEntity
+			to refers[1,1] OpmEntity
+	}
+	
+	
+	// Enums
+	Enumeration EssenceType {
+		Physical , Informational
+	}
+	
+	Enumeration AffiliationType {
+		Systemic , Environmental
+	}
+}

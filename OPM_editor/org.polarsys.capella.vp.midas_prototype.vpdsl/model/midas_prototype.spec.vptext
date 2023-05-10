@@ -1,0 +1,15 @@
+/**
+ * Copyright (c) PolarSys, 2020. All rights reserved. 
+ *
+ *	Viewpoint midas_prototype
+ *	@author: H357213
+ *	@date: 12/16/20
+ *
+ */
+Viewpoint midas_prototype {
+	name: "midas_prototype"
+	Data midas_prototype.data
+	UI midas_prototype.ui
+	Diagrams midas_prototype.diagram
+	Configuration midas_prototype.conf
+}

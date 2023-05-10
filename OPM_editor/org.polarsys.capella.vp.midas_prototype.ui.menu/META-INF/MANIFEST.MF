@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Menu
+Bundle-SymbolicName: org.polarsys.capella.vp.midas_prototype.ui.menu;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.polarsys.capella.vp.midas_prototype.model,
+ org.polarsys.capella.core.sirius.ui,
+ org.eclipse.sirius.diagram.ui
+Automatic-Module-Name: org.polarsys.capella.vp.midas_prototype.ui.menu
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="midas_prototype" version="12.0.0.2017041100">
+  <ownedViewpoints name="midas_prototype_ID" label="midas_prototype" modelFileExtension="midas_prototype melodymodeller">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="SD" label="System Diagram" titleExpression="aql:self.name + ' diagram'" domainClass="midas_prototype.OPM">
+      <metamodel href="../../org.polarsys.capella.vp.midas_prototype/models/midas_prototype.ecore#/"/>
+      <filters xsi:type="filter:CompositeFilterDescription" name="SD.HideInternalElements" label="Hide Internal Elements">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedProcess_CM']"/>
+      </filters>
+      <filters xsi:type="filter:CompositeFilterDescription" name="SD.HideStates" label="Hide States">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedObject_CM']/@subContainerMappings[name='SD.Object.ComposedObject.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedObject_CM']/@subContainerMappings[name='SD.Process.ComposedObject.State_CM']"/>
+      </filters>
+      <defaultLayer name="SD.Default" label="Default">
+        <edgeMappings name="SD.UnidirectionalAssociation_EM" label="Unidirectional Association" deletionDescription="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@toolSections.1/@ownedTools[name='SD.DeleteLinkDel']" sourceMapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedProcess_CM']" targetMapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedProcess_CM']" targetFinderExpression="feature:references">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="SD.Object_CM" label="Object" semanticCandidatesExpression="feature:elements" domainClass="midas_prototype.OpmObject">
+          <subContainerMappings name="SD.Object_CM.ComposedObject_CM" label="Composed Object" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmObject">
+            <subContainerMappings name="SD.Object.ComposedObject.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="SD.Object_CM.ComposedProcess_CM" label="Composed Process" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmProcess">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="2" labelSize="12" showIcon="false" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="SD.Object.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="SD.Process_CM" label="Process" semanticCandidatesExpression="feature:elements" domainClass="midas_prototype.OpmProcess">
+          <subContainerMappings name="SD.Process_CM.ComposedObject_CM" label="Composed Object" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmObject">
+            <subContainerMappings name="SD.Process.ComposedObject.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="SD.Process_CM.ComposedProcess_CM" label="Composed Process" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmProcess">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="2" labelSize="12" showIcon="false" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="2" labelSize="12" showIcon="false" roundedCorner="true">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="SD.NewElementsSection" label="New Elements">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SD.ObjectCreation" label="New Object" containerMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedObject_CM']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsTypeOf(midas_prototype::OPM)">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmObject" referenceName="elements"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsKindOf(midas_prototype::OpmThing)">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmObject" referenceName="composables"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SD.ProcessCreation" label="New Process" containerMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedProcess_CM']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsTypeOf(midas_prototype::OPM)">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmProcess" referenceName="elements"/>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsKindOf(midas_prototype::OpmThing)">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmProcess" referenceName="composables"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="SD.StateCreation" label="New State" precondition="aql:container.oclIsTypeOf(midas_prototype::OpmObject)" containerMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object_CM.ComposedObject_CM']/@subContainerMappings[name='SD.Object.ComposedObject.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Object_CM']/@subContainerMappings[name='SD.Object.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@containerMappings[name='SD.Process_CM']/@subContainerMappings[name='SD.Process_CM.ComposedObject_CM']/@subContainerMappings[name='SD.Process.ComposedObject.State_CM']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmState" referenceName="states"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="SD.NewLinksSection" label="New Links">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="SD.UnidirectionalAssociationCreation" label="New Unidirectional Association" edgeMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='SD']/@defaultLayer/@edgeMappings[name='SD.UnidirectionalAssociation_EM']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="SD.DeleteLinkDel" label="Delete Link">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="references" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="OPD" label="OPD" titleExpression="aql:self.name + ' diagram'" domainClass="midas_prototype.OpmThing">
+      <metamodel href="../../org.polarsys.capella.vp.midas_prototype/models/midas_prototype.ecore#/"/>
+      <defaultLayer name="OPD.Default" label="Default">
+        <edgeMappings name="OPD.UnidirectionalAssociation_EM" label="Unidirectional Association" deletionDescription="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@toolSections.1/@ownedTools[name='OPD.DeleteLinkDel']" sourceMapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ConnectedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ConnectedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ProcessReference_CM']" targetMapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ConnectedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ConnectedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ProcessReference_CM']" targetFinderExpression="feature:references">
+          <style sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="OPD.ConnectedObject_CM" label="Connected Object" deletionDescription="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@toolSections.2/@ownedTools[name='OPD.RemoveExistingElementDel']" semanticCandidatesExpression="aql:(self.eCrossReferences() + self.eInverse()) -> excluding(self.eContainer())" domainClass="midas_prototype.OpmObject">
+          <subContainerMappings name="OPD.ConnectedObject.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OPD.ConnectedProcess_CM" label="Connected Process" deletionDescription="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@toolSections.2/@ownedTools[name='OPD.RemoveExistingElementDel']" semanticCandidatesExpression="aql:(self.eCrossReferences() + self.eInverse()) -> excluding(self.eContainer())" domainClass="midas_prototype.OpmProcess">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OPD.CentralObject_CM" label="Central Object" semanticCandidatesExpression="aql:self" synchronizationLock="true" domainClass="midas_prototype.OpmObject">
+          <subContainerMappings name="OPD.CentralObject.ComposedObject_CM" label="Composed Object" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmObject">
+            <subContainerMappings name="OPD.CentralObject.ComposedObject.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="OPD.CentralObject.ComposedProcess_CM" label="Composed Process" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmProcess">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="2" labelSize="12" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="OPD.CentralObject.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="3" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OPD.CentralProcess_CM" label="Central Process" semanticCandidatesExpression="aql:self" domainClass="midas_prototype.OpmProcess">
+          <subContainerMappings name="OPD.CentralProcess.ComposedObject_CM" label="Composed Object" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmObject">
+            <subContainerMappings name="OPD.CentralProcess.ComposedObject.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="OPD.CentralProcess.ComposedProcess_CM" label="Composed Process" semanticCandidatesExpression="feature:composables" domainClass="midas_prototype.OpmProcess">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="2" labelSize="12" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="3" labelSize="12" roundedCorner="true">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OPD.ObjectReference_CM" label="Object Reference" deletionDescription="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@toolSections.2/@ownedTools[name='OPD.RemoveExistingElementDel']" createElements="false" domainClass="midas_prototype.OpmObject">
+          <subContainerMappings name="OPD.ObjectReference.State_CM" label="State" semanticCandidatesExpression="feature:states" domainClass="midas_prototype.OpmState">
+            <style xsi:type="style:FlatContainerStyleDescription" arcWidth="15" arcHeight="15" borderSizeComputationExpression="1" labelSize="10" showIcon="false" roundedCorner="true">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" labelSize="12">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="OPD.ProcessReference_CM" label="Process Reference" deletionDescription="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@toolSections.2/@ownedTools[name='OPD.RemoveExistingElementDel']" createElements="false" domainClass="midas_prototype.OpmProcess">
+          <style xsi:type="style:FlatContainerStyleDescription" arcWidth="1000" arcHeight="1000" borderSizeComputationExpression="2" labelSize="12" roundedCorner="true">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="OPD.NewElementsSection" label="OPD New Elements">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="OPD.ObjectCreation" label="New Object" containerMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedObject_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:containerView=diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container.eContainer()">
+                    <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsTypeOf(midas_prototype::OPM)">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmObject" referenceName="elements">
+                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']" containerViewExpression="aql:containerView"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsKindOf(midas_prototype::OpmThing)">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmObject" referenceName="composables">
+                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']" containerViewExpression="aql:containerView"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:containerView!=diagram">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmObject" referenceName="composables"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="OPD.ProcessCreation" label="New Process" containerMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedProcess_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ProcessReference_CM']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:containerView=diagram">
+                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:container.eContainer()">
+                    <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsTypeOf(midas_prototype::OPM)">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmProcess" referenceName="elements">
+                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']" containerViewExpression="aql:containerView"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:self.oclIsKindOf(midas_prototype::OpmThing)">
+                      <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmProcess" referenceName="composables">
+                        <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']" containerViewExpression="aql:containerView"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </subModelOperations>
+                <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:containerView!=diagram">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmProcess" referenceName="composables"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="OPD.StateCreation" label="New State" precondition="aql:container.oclIsTypeOf(midas_prototype::OpmObject)" containerMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedObject_CM']/@subContainerMappings[name='OPD.CentralObject.ComposedObject.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralObject_CM']/@subContainerMappings[name='OPD.CentralObject.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.CentralProcess_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedObject_CM']/@subContainerMappings[name='OPD.CentralProcess.ComposedObject.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ConnectedObject_CM']/@subContainerMappings[name='OPD.ConnectedObject.State_CM'] //@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']/@subContainerMappings[name='OPD.ObjectReference.State_CM']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="OpmState" referenceName="states"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="OPD.NewLinksSection" label="OPD New Links">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OPD.UnidirectionalAssociationCreation" label="OPD New Unidirectional Association" edgeMappings="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@edgeMappings[name='OPD.UnidirectionalAssociation_EM']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="references" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="OPD.DeleteLinkDel" label="OPD Delete Link">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="references" elementExpression="aql:elementView.targetNode.target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="OPD.ExistingElementsSection" label="OPD Existing Elements">
+          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="OPD.AddExistingElementWiz" label="Add Existing Element" candidatesExpression="aql:self.eContainer(midas_prototype::OPM).eAllContents()" multiple="true" tree="true" rootExpression="aql:self.OPMContents()" childrenExpression="aql:self.eContents()">
+            <element name="element"/>
+            <containerView name="containerView"/>
+            <container name="container"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:For" expression="var:element" iteratorName="item">
+                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:item.markForAutosize()">
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:item.isOpmObject()">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ObjectReference_CM']" containerViewExpression="var:containerView"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:item.isOpmProcess()">
+                    <subModelOperations xsi:type="tool:CreateView" mapping="//@ownedViewpoints[name='midas_prototype_ID']/@ownedRepresentations[name='OPD']/@defaultLayer/@containerMappings[name='OPD.ProcessReference_CM']" containerViewExpression="var:containerView"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ToolDescription" name="OPD.RemoveExistingElementTool" label="Remove Existing Element">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:elementView">
+                <subModelOperations xsi:type="tool_1:DeleteView"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="OPD.RemoveExistingElementDel" label="Remove Existing Element">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:elementView">
+                <subModelOperations xsi:type="tool_1:DeleteView"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.eclipse.emf.ecoretools.design.service.DesignServices"/>
+    <ownedJavaExtensions qualifiedClassName="org.polarsys.capella.vp.midas_prototype.design.services.DesignServices"/>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ASCII"?>
+<vpdesc:Viewpoint xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configuration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/conf/1.0.0" xmlns:docGenConfiguration="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/DocGenConfiguration/1.0.0" xmlns:vpconf="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpconf/1.0.0" xmlns:vpdesc="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdesc/1.0.0" xmlns:vpdiagram="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpdiagram/1.0.0" xmlns:vpui="http://www.polarsys.org/kitalpha/ad/viewpoint/dsl/as/vpui/1.0.0" name="midas_prototype" shortName="midas_prototype">
+  <VP_Data name="midas_prototype.data">
+    <VP_Classes name="OPM" icon="opm.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="elements" cardinality="0..*" LocalTarget="//@VP_Data/@VP_Classes.2"/>
+      <extends href="http://www.polarsys.org/capella/core/modeller/6.0.0#//SystemEngineering"/>
+    </VP_Classes>
+    <VP_Classes name="OpmEntity" abstract="true">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="references" cardinality="0..*" LocalTarget="//@VP_Data/@VP_Classes.6"/>
+      <VP_Class_Attributes name="name">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:ExternalSuperClass">
+        <superClass href="http://www.polarsys.org/kitalpha/emde/1.0.0#//Element"/>
+      </Inheritences>
+    </VP_Classes>
+    <VP_Classes name="OpmThing" abstract="true">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="composables" cardinality="0..*" LocalTarget="//@VP_Data/@VP_Classes.2"/>
+      <VP_Class_Attributes name="essence">
+        <owned_type xsi:type="vpdesc:LocalAttributeType" type="//@VP_Data/@VP_Enumerations.0"/>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="affiliation">
+        <owned_type xsi:type="vpdesc:LocalAttributeType" type="//@VP_Data/@VP_Enumerations.1"/>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.1"/>
+    </VP_Classes>
+    <VP_Classes name="OpmObject" icon="object.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="states" cardinality="0..*" LocalTarget="//@VP_Data/@VP_Classes.5"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.2"/>
+    </VP_Classes>
+    <VP_Classes name="OpmProcess" icon="process.gif">
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.2"/>
+    </VP_Classes>
+    <VP_Classes name="OpmState" icon="state.gif">
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.1"/>
+    </VP_Classes>
+    <VP_Classes name="OpmRelation" abstract="true">
+      <VP_Class_Attributes name="fromParticipationConstraint">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="toParticipationConstraint">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:ExternalSuperClass">
+        <superClass href="http://www.polarsys.org/kitalpha/emde/1.0.0#//Element"/>
+      </Inheritences>
+    </VP_Classes>
+    <VP_Classes name="OpmStructuralRelation">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Class_Attributes name="name">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="tag">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.6"/>
+    </VP_Classes>
+    <VP_Classes name="OpmProceduralRelation" abstract="true">
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.6"/>
+    </VP_Classes>
+    <VP_Classes name="OpmConsumeResultRelation" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.2"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.2"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmInputRelation" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.5"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.4"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmOutputRelation" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.4"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.5"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmEffectLink" icon="dual_closed_arrow.png">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.2"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.2"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmAgentLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.3"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.4"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmInstrumentLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.3"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.4"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmUndirectionalLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Class_Attributes name="tag">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmBidirectionalLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Class_Attributes name="tagLeftToRight">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <VP_Class_Attributes name="tagRightToLeft">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmReciprocalLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Class_Attributes name="tag">
+        <owned_type xsi:type="vpdesc:ExternalAttributeType">
+          <type href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </owned_type>
+      </VP_Class_Attributes>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmAggregationLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmExhibitionLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmGeneralizationLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Classes name="OpmClassificationLink" icon="single_closed_arrow_left.gif">
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="from" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <VP_Classes_Associations xsi:type="vpdesc:LocalClassAssociation" name="to" cardinality="1" type="reference" LocalTarget="//@VP_Data/@VP_Classes.1"/>
+      <Inheritences xsi:type="vpdesc:LocalSuperClass" superClass="//@VP_Data/@VP_Classes.8"/>
+    </VP_Classes>
+    <VP_Enumerations name="EssenceType">
+      <ownedValues name="Physical" literal="Physical"/>
+      <ownedValues name="Informational" literal="Informational"/>
+    </VP_Enumerations>
+    <VP_Enumerations name="AffiliationType">
+      <ownedValues name="Systemic" literal="Systemic"/>
+      <ownedValues name="Environmental" literal="Environmental"/>
+    </VP_Enumerations>
+  </VP_Data>
+  <VP_Aspects xsi:type="vpdiagram:DiagramSet" name="midas_prototype.diagram"/>
+  <VP_Aspects xsi:type="vpui:UIDescription" name="midas_prototype.ui">
+    <UIs name="midas_prototype_OpmEntity" label="OpmEntity">
+      <UI_Containers name="midas_prototype_OpmEntitySection">
+        <subContainers name="midas_prototype_OpmEntity_AttributeGroup" label="Attributes">
+          <UI_fields name="entityName" label="Name">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.1/@VP_Class_Attributes.0"/>
+          </UI_fields>
+        </subContainers>
+        <subContainers name="midas_prototype_OpmEntity_AssociationGroup" label="Associations">
+          <UI_fields name="references" label="References" type="multipleChoiceList">
+            <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.1/@VP_Classes_Associations.0"/>
+          </UI_fields>
+        </subContainers>
+      </UI_Containers>
+      <UI_DataSource xsi:type="vpui:LocalClass" UI_For_LocalClass="//@VP_Data/@VP_Classes.1"/>
+    </UIs>
+    <UIs name="midas_prototype_OpmThing" label="OpmThing">
+      <UI_Containers name="midas_prototype_OpmThingSection">
+        <UI_fields name="composablesAssociation" label="Composables" type="multipleChoiceList">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.2/@VP_Classes_Associations.0"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_DataSource xsi:type="vpui:LocalClass" UI_For_LocalClass="//@VP_Data/@VP_Classes.2"/>
+    </UIs>
+    <UIs name="midas_prototype_OpmObject" label="OpmObject">
+      <UI_Containers name="midas_prototype_OpmObjectSection">
+        <UI_fields name="stateAssociation" label="States" type="multipleChoiceList">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.3/@VP_Classes_Associations.0"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_DataSource xsi:type="vpui:LocalClass" UI_For_LocalClass="//@VP_Data/@VP_Classes.3"/>
+    </UIs>
+    <UIs name="midas_prototype_OpmRelation" label="OpmReference">
+      <UI_Containers name="midas_prototype_OpmReferenceToSection" label="To">
+        <UI_fields name="referenceToCard" label="Cardinality">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.6/@VP_Class_Attributes.1"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_Containers name="midas_prototype_OpmReferenceFromSection" label="From">
+        <UI_fields name="referenceFromCard" label="Cardinality">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.6/@VP_Class_Attributes.0"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_DataSource xsi:type="vpui:LocalClass" UI_For_LocalClass="//@VP_Data/@VP_Classes.6"/>
+    </UIs>
+    <UIs name="midas_prototype_OpmStructuralRelation" label="OpmStructuralRelation">
+      <UI_Containers name="midas_prototype_OpmSection" label="Section">
+        <UI_fields name="referenceTo" label="To" type="simpleChoiceList">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.7/@VP_Classes_Associations.1"/>
+        </UI_fields>
+        <UI_fields name="referenceFrom" label="From" type="simpleChoiceList">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.7/@VP_Classes_Associations.0"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_Containers name="midas_prototype_OpmReferenceSection">
+        <UI_fields name="referenceName" label="Name">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.7/@VP_Class_Attributes.0"/>
+        </UI_fields>
+        <UI_fields name="referenceLabel" label="Tag">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.7/@VP_Class_Attributes.1"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_DataSource xsi:type="vpui:LocalClass" UI_For_LocalClass="//@VP_Data/@VP_Classes.7"/>
+    </UIs>
+    <UIs name="midas_prototype_OpmOutputRelation" label="OpmOutputRelation">
+      <UI_Containers name="midas_prototype_OpmOutputRelation" label="Output Relation">
+        <UI_fields name="relationOutputTo" label="To" type="simpleChoiceList">
+          <Mapping UI_Field_Mapped_To="//@VP_Data/@VP_Classes.11/@VP_Classes_Associations.1"/>
+        </UI_fields>
+      </UI_Containers>
+      <UI_DataSource xsi:type="vpui:LocalClass" UI_For_LocalClass="//@VP_Data/@VP_Classes.11"/>
+    </UIs>
+  </VP_Aspects>
+  <VP_Aspects xsi:type="vpconf:Configuration" name="midas_prototype.conf">
+    <vpConfigurationElements xsi:type="vpconf:TargetApplication" type="Capella"/>
+    <vpConfigurationElements xsi:type="vpconf:GenerationConfiguration" projectName="org.polarsys.capella.vp.midas_prototype" nsuri="http://www.polarsys.org/capella/midas_prototype"/>
+    <vpConfigurationElements xsi:type="vpconf:Release" viewpointVersion="1.0.0.qualifier" viewpointDescription="Viewpoint Description">
+      <requiredExecutionEnvironment>JavaSE-1.8</requiredExecutionEnvironment>
+    </vpConfigurationElements>
+    <vpConfigurationElements xsi:type="vpconf:Generation">
+      <ownedDataGenerationConf/>
+      <ownedExtensionGenConf xsi:type="configuration:DiagramGenerationConfiguration"/>
+      <ownedExtensionGenConf xsi:type="docGenConfiguration:DocumentationGenerationConfiguration"/>
+    </vpConfigurationElements>
+  </VP_Aspects>
+</vpdesc:Viewpoint>

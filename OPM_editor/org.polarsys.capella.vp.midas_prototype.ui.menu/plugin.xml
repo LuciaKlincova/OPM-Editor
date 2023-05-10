@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:popup.new?after=additions">
+         <command
+               commandId="org.polarsys.capella.vp.midas_prototype.ui.menu.new.opd"
+               style="push">
+            <visibleWhen
+                  checkEnabled="false">
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="org.polarsys.capella.vp.midas_prototype.ui.menu.new.opd"
+            name="New OPD">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.polarsys.capella.vp.midas_prototype.ui.menu.handlers.CreateOPDDiagramEditorHandler"
+            commandId="org.polarsys.capella.vp.midas_prototype.ui.menu.new.opd">
+      </handler>
+   </extension>
+
+</plugin>
